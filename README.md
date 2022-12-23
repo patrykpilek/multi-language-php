@@ -4,6 +4,7 @@
 
 - [ ] An introduction to translating content using PHP
   - translate a page by copying the entire page and translating all the text in it
+  - translate a page by using conditional statements for every string
 - [ ] Getting the language from the URL
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language

@@ -1,3 +1,8 @@
+<?php
+
+$lang = 'es';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +10,13 @@
 </head>
 <body>
 
-    <h1>Home</h1>
+    <h1>
+        <?php if ($lang == 'en'): ?>
+            Home
+        <?php elseif ($lang == 'es'): ?>
+            Inicio
+        <?php endif; ?>
+    </h1>
 
     <p>Hello and welcome!</p>
 
