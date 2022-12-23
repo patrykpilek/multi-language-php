@@ -2,7 +2,15 @@
 
 ## Content
 
-- [ ] An introduction to translating content using PHP
+- [x] An introduction to translating content using PHP
+  - translate a page by copying the entire page and translating all the text in it
+  - translate a page by using conditional statements for every string
+  - store translated strings in an array with one array for each language
+  - [ISO/IEC 8859-1 - Wikipedia](https://en.wikipedia.org/wiki/ISO/IEC_8859-1)
+  - [Unicode - Wikipedia](https://en.wikipedia.org/wiki/Unicode)
+  - [UTF-8 Wikipedia](https://en.wikipedia.org/wiki/UTF-8)
+  - [Declaring character encodings in HTML](https://www.w3.org/International/questions/qa-html-encoding-declarations)
+  - display any character by encoding files using UTF-8
 - [ ] Getting the language from the URL
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language
