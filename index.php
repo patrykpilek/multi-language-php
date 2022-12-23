@@ -15,7 +15,7 @@ if ($lang == 'en') {
     $trans = [
         'title' => 'Ejemplo',
         'header' => 'Inicio',
-        'welcome' => '�Hola y bienvenido!'
+        'welcome' => '¡Hola y bienvenido!'
     ];
 
 }
@@ -24,6 +24,7 @@ if ($lang == 'en') {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title><?= $trans['title'] ?></title>
 </head>
 <body>
