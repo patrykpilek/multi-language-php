@@ -12,6 +12,8 @@
   - [Declaring character encodings in HTML](https://www.w3.org/International/questions/qa-html-encoding-declarations)
   - display any character by encoding files using UTF-8
 - [ ] Getting the language from the URL
+  - [ISO 639-1 - Wikipedia](https://en.wikipedia.org/wiki/ISO_639-1) 
+  - language code standards and passing the language code in the URL
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
