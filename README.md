@@ -18,6 +18,7 @@
   - [Apache mod_rewrite](https://httpd.apache.org/docs/current/rewrite/intro.html)
   - [Apache .htaccess files](https://httpd.apache.org/docs/current/howto/htaccess.html)
   - get the language code from a subfolder or URL segment
+  - get the language code form a subdomain
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
