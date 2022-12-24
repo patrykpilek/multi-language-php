@@ -1,5 +1,7 @@
 <?php
 
+var_dump($_GET);
+
 $lang = $_GET['lang'];
 
 if ($lang == 'en') {

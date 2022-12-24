@@ -15,6 +15,9 @@
   - [ISO 639-1 - Wikipedia](https://en.wikipedia.org/wiki/ISO_639-1) 
   - language code standards and passing the language code in the URL
   - get the language code from the query string
+  - [Apache mod_rewrite](https://httpd.apache.org/docs/current/rewrite/intro.html)
+  - [Apache .htaccess files](https://httpd.apache.org/docs/current/howto/htaccess.html)
+  - get the language code from a subfolder or URL segment
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
