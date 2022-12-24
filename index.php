@@ -1,6 +1,6 @@
 <?php
 
-$lang = 'es';
+$lang = $_GET['lang'];
 
 if ($lang == 'en') {
 

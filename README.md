@@ -14,6 +14,7 @@
 - [ ] Getting the language from the URL
   - [ISO 639-1 - Wikipedia](https://en.wikipedia.org/wiki/ISO_639-1) 
   - language code standards and passing the language code in the URL
+  - get the language code from the query string
 - [ ] Locale identifiers and validating the language from the URL
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
