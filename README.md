@@ -22,6 +22,7 @@
   - [List of top-level domains - Wikipedia](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
   - get the language code from the top-level domain
 - [ ] Locale identifiers and validating the language from the URL
+  - add an i18n class with a list of supported languages
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
