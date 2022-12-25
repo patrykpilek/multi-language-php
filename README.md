@@ -28,6 +28,7 @@
   - combine language codes and region codes to create locale identifiers
   - [PHP: Local::canonicalize](https://www.php.net/manual/en/locale.canonicalize.php)
   - canonicalise the locale code from the URL
+  - get the best match from the list of supported locales
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
