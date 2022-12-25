@@ -41,6 +41,11 @@
   - compare supported locales to the browser preferences and choose the best match
   - get the best match to the browser preferences using just the language codes
   - refactor the code to make it clearer
+  - [PHP: $_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)
+  - [MaxMind GeoIP databases](https://www.maxmind.com/en/geoip2-services-and-databases)
+  - [IPinfo geolocation API](https://ipinfo.io/)
+  - [IPinfo official PHP client](https://github.com/ipinfo/php)
+  - geolocation: matching the user's IP address to their location
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
