@@ -23,6 +23,11 @@
   - get the language code from the top-level domain
 - [ ] Locale identifiers and validating the language from the URL
   - add an i18n class with a list of supported languages
+  - [List of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+  - [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
+  - combine language codes and region codes to create locale identifiers
+  - [PHP: Local::canonicalize](https://www.php.net/manual/en/locale.canonicalize.php)
+  - canonicalise the locale code from the URL
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
