@@ -38,6 +38,7 @@
   - get language preferences form the browser: the HTTP Accept-Language header
   - [PHP: Locale::acceptFromHttp(https://www.php.net/manual/en/locale.acceptfromhttp.php)
   - parse the Accept-Language header to get a list of locales in order of preference
+  - compare supported locales to the browser preferences and choose the best match
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
