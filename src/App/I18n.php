@@ -33,4 +33,9 @@ class I18n
 
         return null;
     }
+    
+    public function getDefault()
+    {
+        return $this->supported_locales[0];      
+    }    
 }

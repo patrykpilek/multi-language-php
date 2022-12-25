@@ -29,6 +29,7 @@
   - [PHP: Local::canonicalize](https://www.php.net/manual/en/locale.canonicalize.php)
   - canonicalise the locale code from the URL
   - get the best match from the list of supported locales
+  - redirect to the default locale if the value in the URL is invalid
 - [ ] Detecting the visitor's preferred language
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
