@@ -40,6 +40,7 @@
   - parse the Accept-Language header to get a list of locales in order of preference
   - compare supported locales to the browser preferences and choose the best match
   - get the best match to the browser preferences using just the language codes
+  - refactor the code to make it clearer
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
