@@ -1,16 +1,23 @@
 <?php
 
-if (substr($_SERVER['HTTP_HOST'], -6) == '.co.uk') {
+require 'src/App/I18n.php';
 
-    $lang = 'en';
+$i18n = new App\I18n(['en_GB', 'es']);
 
-} elseif (substr($_SERVER['HTTP_HOST'], -3) == '.es') {
+list($subdomain, $domain) = explode('.', $_SERVER['HTTP_HOST'], 2);
 
-    $lang = 'es';
+$lang = $i18n->getBestMatch($subdomain);
 
+if ($lang === null) {
+  
+    $default = substr($i18n->getDefault(), 0, 2);
+    
+    header("Location: http://" . $default . ".localhost/");
+    exit;
+      
 }
 
-if ($lang == 'en') {
+if ($lang == 'en_GB') {
 
     $trans = [
         'title' => 'Example',
@@ -30,7 +37,7 @@ if ($lang == 'en') {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="<?= str_replace('_', '-', $lang) ?>">
 <head>
     <meta charset="UTF-8">
     <title><?= $trans['title'] ?></title>
