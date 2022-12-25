@@ -1,23 +1,26 @@
 <?php
 
 require 'src/App/I18n.php';
+require __DIR__  . '/vendor/autoload.php';
 
 $i18n = new App\I18n(['en_GB', 'es']);
 
 list($subdomain, $domain) = explode('.', $_SERVER['HTTP_HOST'], 2);
 
-$lang = $i18n->getBestMatch($subdomain);
+$locale = $i18n->getBestMatch($subdomain);
 
-if ($lang === null) {
+if ($locale === null) {
   
-    $default = substr($i18n->getDefault(), 0, 2);
+    $locale = $i18n->getLocaleForRedirect(); 
+  
+    $subdomain = substr($locale, 0, 2);
     
-    header("Location: http://" . $default . ".localhost/");
+    header("Location: http://" . $subdomain . ".localhost/");
     exit;
       
 }
 
-if ($lang == 'en_GB') {
+if ($locale == 'en_GB') {
 
     $trans = [
         'title' => 'Example',
@@ -25,7 +28,7 @@ if ($lang == 'en_GB') {
         'welcome' => 'Hello and welcome!'
     ];
 
-} elseif ($lang == 'es') {
+} elseif ($locale == 'es') {
 
     $trans = [
         'title' => 'Ejemplo',
@@ -37,7 +40,7 @@ if ($lang == 'en_GB') {
 
 ?>
 <!DOCTYPE html>
-<html lang="<?= str_replace('_', '-', $lang) ?>">
+<html lang="<?= str_replace('_', '-', $locale) ?>">
 <head>
     <meta charset="UTF-8">
     <title><?= $trans['title'] ?></title>
