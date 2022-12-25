@@ -33,6 +33,9 @@
   - [Declaring language in HTML](https://www.w3.org/International/questions/qa-html-language-declarations)
   - declare the language of the HTML document with the lang attribute
 - [ ] Detecting the visitor's preferred language
+  - [Accept-Language HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+  - [PHP: $_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)
+  - get language preferences form the browser: the HTTP Accept-Language header
 - [ ] Using gettext with PHP
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
