@@ -59,6 +59,8 @@
   - [Ubuntu php-gettext](https://packages.ubuntu.com/bionic/php-gettext)
   - the PHP gettext extension and gettext function for marking translatable strings
   - create the folders to store the gettext translation files
+  - [Install gettext on macOS](https://poedit.net/)
+  - install the Poedit editor and create a .po translation file
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
