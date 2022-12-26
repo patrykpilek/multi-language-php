@@ -31,7 +31,12 @@ $pi = 3.14159;
 // setlocale(LC_ALL, 'es_ES.UTF-8');
 
 $formatter = new NumberFormatter($locale, NumberFormatter::DECIMAL);
-$formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 60);
+$formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 5);
+
+$timestamp = strtotime('20 July 1969');
+
+$date_formatter = new IntlDateFormatter($locale, null, null);
+$date_formatter->setPattern('EEEE, d MMMM Y');
 
 ?>
 <!DOCTYPE html>
@@ -49,6 +54,10 @@ $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 60);
     <p><?= sprintf($translator->ngettext("You have %d message", "You have %d messages", $count), $count) ?></p>
     
     <p><?= $formatter->format($pi) ?></p>
+    
+    <!-- <p><?= strftime("%A, %d %B %Y", $timestamp) ?></p> -->
+    
+    <p><?= $date_formatter->format($timestamp) ?></p>
     
 </body>
 </html>
