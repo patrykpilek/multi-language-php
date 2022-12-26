@@ -15,7 +15,7 @@ if ($locale === null) {
   
     $subdomain = substr($locale, 0, 2);
     
-    header("Location: http://" . $subdomain . ".localhost/");
+    header("Location: http://" . $subdomain . ".phpi18n.localhost/");
     exit;
       
 }
@@ -25,6 +25,13 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
 $name = "Dave";
 
 $count = 1;
+
+$pi = 3.14159;
+
+// setlocale(LC_ALL, 'es_ES.UTF-8');
+
+$formatter = new NumberFormatter($locale, NumberFormatter::DECIMAL);
+$formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 60);
 
 ?>
 <!DOCTYPE html>
@@ -40,6 +47,8 @@ $count = 1;
     <p><?= sprintf($translator->gettext("Welcome, %s"), $name) ?></p>
 
     <p><?= sprintf($translator->ngettext("You have %d message", "You have %d messages", $count), $count) ?></p>
+    
+    <p><?= $formatter->format($pi) ?></p>
     
 </body>
 </html>

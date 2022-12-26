@@ -77,5 +77,9 @@
   - including variables in translated strings: use sprintf with gettext
   - [PHP: ngettext](https://www.php.net/manual/en/function.ngettext.php)
   - display plural forms of messages using ngettext
+  - [Decimal separator - Wikipedia](https://en.wikipedia.org/wiki/Decimal_separator)
+  - [PHP: sprintf](https://www.php.net/manual/en/function.sprintf.php)
+  - [PHP: The NumberFormatter class](https://www.php.net/manual/en/class.numberformatter.php)
+  - decimal separators: format decimal numbers based on the locale
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
 - [ ] Selecting and remembering the language
