@@ -1,6 +1,7 @@
 <?php
 
 require 'src/App/I18n.php';
+require 'vendor/autoload.php';
 
 $i18n = new App\I18n(['en_GB', 'es']);
 

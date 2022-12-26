@@ -63,6 +63,9 @@
   - install the Poedit editor and create a .po translation file
   - configure gettext to use translation file and show the translations
 - [ ] Using MoTranslator as gettext-compatible alternative
+  - [PHP: gettext](https://www.php.net/manual/en/ref.gettext.php)
+  - [MoTranslator](https://github.com/phpmyadmin/motranslator)
+  - MoTranslator: a .mo-file-compatible alternative to gettext
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
 - [ ] Selecting and remembering the language
