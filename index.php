@@ -24,6 +24,8 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
 
 $name = "Dave";
 
+$count = 1;
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
@@ -37,5 +39,7 @@ $name = "Dave";
 
     <p><?= sprintf($translator->gettext("Welcome, %s"), $name) ?></p>
 
+    <p><?= sprintf($translator->ngettext("You have %d message", "You have %d messages", $count), $count) ?></p>
+    
 </body>
 </html>
