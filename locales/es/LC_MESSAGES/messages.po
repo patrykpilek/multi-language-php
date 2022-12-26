@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-04-22 19:38+0200\n"
-"PO-Revision-Date: 2020-04-22 19:39+0200\n"
+"POT-Creation-Date: 2020-04-23 11:50+0200\n"
+"PO-Revision-Date: 2020-04-23 11:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -15,18 +15,18 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: index.php\n"
 
-#: index.php:40
+#: index.php:30
 msgid "Example"
 msgstr "Ejemplo"
 
-#: index.php:44
+#: index.php:34
 msgid "Home"
 msgstr "Inicio"
 
-#: index.php:46
+#: index.php:36
 msgid "Hello and welcome!"
 msgstr "¡Hola y bienvenido!"
 
-#: index.php:48
+#: index.php:38
 msgid "Thank you"
 msgstr "Gracias"
