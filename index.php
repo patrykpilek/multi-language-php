@@ -1,10 +1,6 @@
 <?php
 
 require 'src/App/I18n.php';
-require __DIR__  . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->safeLoad();
 
 $i18n = new App\I18n(['en_GB', 'es']);
 
@@ -23,36 +19,31 @@ if ($locale === null) {
       
 }
 
-if ($locale == 'en_GB') {
+putenv("LANG=$locale");
+putenv("LANGUAGE=$locale");
 
-    $trans = [
-        'title' => 'Example',
-        'header' => 'Home',
-        'welcome' => 'Hello and welcome!'
-    ];
+setlocale(LC_ALL, $locale);
 
-} elseif ($locale == 'es') {
+$domain = 'messages';
 
-    $trans = [
-        'title' => 'Ejemplo',
-        'header' => 'Inicio',
-        'welcome' => '¡Hola y bienvenido!'
-    ];
+textdomain($domain);
 
-}
+bindtextdomain($domain, 'locales');
+
+bind_textdomain_codeset($domain, 'UTF-8');
 
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
 <head>
     <meta charset="UTF-8">
-    <title><?= $trans['title'] ?></title>
+    <title><?= _('Example') ?></title>
 </head>
 <body>
 
-    <h1><?= $trans['header'] ?></h1>
+    <h1><?= _('Home') ?></h1>
 
-    <p><?= $trans['welcome'] ?></p>
+    <p><?= _('Hello and welcome!') ?></p>
 
 </body>
 </html>

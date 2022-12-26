@@ -112,37 +112,21 @@ class I18n
                   
         }
         
-        $locale = $this->getBestMatchFromIPAddress();
-        
-        if ($locale !== null) {
-          
-            return $locale;          
-                  
-        }
-        
         return $this->getDefault();        
     }
-
-    private function getBestMatchFromIPAddress()
-    {
-        try {
-            $client = new \ipinfo\ipinfo\IPinfo($_ENV["IPINFO_TOKEN"]);
-            
-            $details = $client->getDetails($_SERVER['REMOTE_ADDR']);
-
-//            var_dump($details);
-//            exit;
-                                    
-            if (isset($details->country)) {
-            
-                return $this->getBestMatch($details->country);
-              
-            }            
-            
-        } catch (\ipinfo\ipinfo\IPinfoException $e) {
-
-            echo $e->getMessage();
-
-        }            
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
