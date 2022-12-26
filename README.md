@@ -72,6 +72,18 @@
   - [MoTranslator: gettext compatibility functions](https://github.com/phpmyadmin/motranslator#gettext-compatibility-usage)
   - use the simpler MoTranslator object API
   - using real or keyword messages: the advantages and disadvantages
-- [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
+- [x] Translating dynamic content: variable substitution, plurals, decimals and dates
+  - [PHP: sprintf](https://www.php.net/manual/en/function.sprintf.php)
+  - including variables in translated strings: use sprintf with gettext
+  - [PHP: ngettext](https://www.php.net/manual/en/function.ngettext.php)
+  - display plural forms of messages using ngettext
+  - [Decimal separator - Wikipedia](https://en.wikipedia.org/wiki/Decimal_separator)
+  - [PHP: sprintf](https://www.php.net/manual/en/function.sprintf.php)
+  - [PHP: The NumberFormatter class](https://www.php.net/manual/en/class.numberformatter.php)
+  - decimal separators: format decimal numbers based on the locale
+  - [PHP: date](https://www.php.net/manual/en/function.date.php)
+  - [PHP: strftime](https://www.php.net/manual/en/function.strftime.php)
+  - [PHP: The IntDateFormatter class](https://www.php.net/manual/en/class.intldateformatter.php)
+  - translate day and month names in dates based on the locale
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
 - [ ] Selecting and remembering the language
