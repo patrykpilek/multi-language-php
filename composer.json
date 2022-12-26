@@ -1,6 +1,7 @@
 {
     "require": {
         "ipinfo/ipinfo": "^2.3",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "phpmyadmin/motranslator": "^5.3"
     }
 }

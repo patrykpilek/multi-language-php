@@ -1,6 +1,7 @@
 <?php
 
 require 'src/App/I18n.php';
+require 'vendor/autoload.php';
 
 $i18n = new App\I18n(['en_GB', 'es']);
 
@@ -19,31 +20,22 @@ if ($locale === null) {
       
 }
 
-putenv("LANG=$locale");
-putenv("LANGUAGE=$locale");
-
-setlocale(LC_ALL, $locale);
-
-$domain = 'messages';
-
-textdomain($domain);
-
-bindtextdomain($domain, 'locales');
-
-bind_textdomain_codeset($domain, 'UTF-8');
+$translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
 <head>
     <meta charset="UTF-8">
-    <title><?= _('Example') ?></title>
+    <title><?= $translator->gettext('Example') ?></title>
 </head>
 <body>
 
-    <h1><?= _('Home') ?></h1>
+    <h1><?= $translator->gettext('Home') ?></h1>
 
-    <p><?= _('Hello and welcome!') ?></p>
+    <p><?= $translator->gettext('Hello and welcome!') ?></p>
+
+    <p><?= $translator->gettext('Thank you') ?></p>
 
 </body>
 </html>
