@@ -22,6 +22,8 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
+$name = "Dave";
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
@@ -33,9 +35,7 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
 
     <h1><?= $translator->gettext('Home') ?></h1>
 
-    <p><?= $translator->gettext('Hello and welcome!') ?></p>
-
-    <p><?= $translator->gettext('Thank you') ?></p>
+    <p><?= sprintf($translator->gettext("Welcome, %s"), $name) ?></p>
 
 </body>
 </html>
