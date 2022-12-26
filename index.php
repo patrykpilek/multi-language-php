@@ -19,6 +19,19 @@ if ($locale === null) {
       
 }
 
+putenv("LANG=$locale");
+putenv("LANGUAGE=$locale");
+
+setlocale(LC_ALL, $locale);
+
+$domain = 'messages';
+
+textdomain($domain);
+
+bindtextdomain($domain, 'locales');
+
+bind_textdomain_codeset($domain, 'UTF-8');
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">

@@ -48,7 +48,7 @@
   - geolocation: matching the user's IP address to their location
   - use a geolocation API to get the country code from the IP address
   - [ipinfo - token](https://ipinfo.io/account/token)
-- [ ] Using gettext with PHP
+- [x] Using gettext with PHP
   - [Symfony translations](https://symfony.com/doc/current/translation.html#basic-translation)
   - [PO files](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html)
   - [PHP: gettext](https://www.php.net/manual/en/book.gettext.php)
@@ -61,6 +61,7 @@
   - create the folders to store the gettext translation files
   - [Install gettext on macOS](https://poedit.net/)
   - install the Poedit editor and create a .po translation file
+  - configure gettext to use translation file and show the translations
 - [ ] Using MoTranslator as gettext-compatible alternative
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
