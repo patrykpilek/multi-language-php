@@ -20,36 +20,22 @@ if ($locale === null) {
       
 }
 
-PhpMyAdmin\MoTranslator\Loader::loadFunctions();
-
-_setlocale(LC_ALL, $locale);
-
-$domain = 'messages';
-
-_textdomain($domain);
-
-_bindtextdomain($domain, 'locales');
-
-_bind_textdomain_codeset($domain, 'UTF-8');
+$translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
 <head>
     <meta charset="UTF-8">
-    <title><?= __('Example') ?></title>
+    <title><?= $translator->gettext('Example') ?></title>
 </head>
 <body>
 
-    <h1><?= __('Home') ?></h1>
+    <h1><?= $translator->gettext('Home') ?></h1>
 
-    <p><?= __('Hello and welcome!') ?></p>
+    <p><?= $translator->gettext('Hello and welcome!') ?></p>
 
-    <p><?= __('Thank you') ?></p>
+    <p><?= $translator->gettext('Thank you') ?></p>
 
 </body>
 </html>
-
-
-
-

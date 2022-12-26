@@ -69,6 +69,8 @@
   - [MoTranslator: gettext compatibility functions](https://github.com/phpmyadmin/motranslator#gettext-compatibility-usage)
   - using MoTranslator with its gettext compatibility functions
   - configure Poedit to extract MoTranslator translations
+  - [MoTranslator: gettext compatibility functions](https://github.com/phpmyadmin/motranslator#gettext-compatibility-usage)
+  - use the simpler MoTranslator object API
 - [ ] Translating dynamic content: variable substitution, plurals, decimals and dates
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
 - [ ] Selecting and remembering the language
