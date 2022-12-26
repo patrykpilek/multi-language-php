@@ -126,7 +126,7 @@ class I18n
     private function getBestMatchFromIPAddress()
     {
         try {
-            $client = new \ipinfo\ipinfo\IPinfo('your access token here');
+            $client = new \ipinfo\ipinfo\IPinfo($_ENV["IPINFO_TOKEN"]);
             
             $details = $client->getDetails($_SERVER['REMOTE_ADDR']);
 

@@ -3,6 +3,9 @@
 require 'src/App/I18n.php';
 require __DIR__  . '/vendor/autoload.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->safeLoad();
+
 $i18n = new App\I18n(['en_GB', 'es']);
 
 list($subdomain, $domain) = explode('.', $_SERVER['HTTP_HOST'], 2);
