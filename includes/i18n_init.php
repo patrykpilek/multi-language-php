@@ -18,3 +18,5 @@ if ($locale === null) {
 }
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
+
+$i18n->getLinkData();

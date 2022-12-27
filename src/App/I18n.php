@@ -114,6 +114,17 @@ class I18n
         
         return $this->getDefault();        
     }
+
+    public function getLinkData()
+    {
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+        
+        $port = $_SERVER["SERVER_PORT"] == "80" ? '' : ":{$_SERVER['SERVER_PORT']}";
+        
+        $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $port . $_SERVER['REQUEST_URI'];
+        
+        echo $url;
+    }
 }
 
 
