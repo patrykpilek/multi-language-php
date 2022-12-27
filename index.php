@@ -22,11 +22,19 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
-$conn = new PDO('mysql:host=localhost;dbname=phpi18n_2;charset=utf8', 'root', 'secret');
+$conn = new PDO('mysql:host=localhost;dbname=phpi18n_3;charset=utf8', 'root', 'secret');
 
-$sql = "SELECT title_$locale AS title, description_$locale AS description, size FROM product";
+$sql = "SELECT title, description, size
+        FROM product
+        JOIN product_translation
+        ON product.id = product_translation.product_id
+        WHERE locale = :locale";
 
-$stmt = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+
+$stmt->bindValue(':locale', $locale, PDO::PARAM_STR);
+
+$stmt->execute();
 
 $products = $stmt->fetchAll();
 
