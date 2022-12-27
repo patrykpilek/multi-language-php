@@ -89,4 +89,9 @@
   - [GNU gettext](https://www.gnu.org/software/gettext/manual/gettext.html)
   - handle lang strings of text in separate files
   - display a message if the file containing the translation is unavailable
+  - [Markdown](https://daringfireball.net/projects/markdown/)
+  - [Markdown emphasis syntax](https://daringfireball.net/projects/markdown/syntax#em)
+  - use a plain-text formatting language to help translators
+  - [Packagist: markdown parsers](https://packagist.org/?query=markdown)
+  - convert translations in separate files to Markdown
 - [ ] Selecting and remembering the language

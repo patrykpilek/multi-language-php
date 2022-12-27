@@ -22,11 +22,15 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
-$filename = "content/body.$locale.html";
+$filename = "content/body.$locale.md";
 
 if (is_readable($filename)) {
 
+    $parser = new Parsedown;
+
     $content = file_get_contents($filename);
+  
+    $content = $parser->text($content);  
   
 } else {
   
