@@ -22,21 +22,13 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
-$filename = "content/body.$locale.md";
+$conn = new PDO('mysql:host=localhost;dbname=phpi18n_2;charset=utf8', 'root', 'secret');
 
-if (is_readable($filename)) {
+$sql = "SELECT title_$locale AS title, description_$locale AS description, size FROM product";
 
-    $parser = new Parsedown;
+$stmt = $conn->query($sql);
 
-    $content = file_get_contents($filename);
-  
-    $content = $parser->text($content);  
-  
-} else {
-  
-    $content = "Content for $locale not found";
-  
-}
+$products = $stmt->fetchAll();
 
 ?>
 <!DOCTYPE html>
@@ -48,8 +40,39 @@ if (is_readable($filename)) {
 <body>
 
     <h1><?= $translator->gettext('Home') ?></h1>
-    
-    <?= $content ?>
+
+    <table border="1">
+        <thead>
+            <th><?= $translator->gettext('Title') ?></th>
+            <th><?= $translator->gettext('Description') ?></th>
+            <th><?= $translator->gettext('Size') ?></th>
+        </thead>
+        <tbody>
+
+            <?php foreach ($products as $product): ?>
+
+                <tr>
+                    <td><?= $product['title'] ?></td>
+                    <td><?= $product['description'] ?></td>
+                    <td><?= $product['size'] ?></td>
+                </tr>
+
+            <?php endforeach; ?>
+
+        <tbody>
+    </table>    
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -94,4 +94,5 @@
   - use a plain-text formatting language to help translators
   - [Packagist: markdown parsers](https://packagist.org/?query=markdown)
   - convert translations in separate files to Markdown
+  - translate data from a database: separate table for the translations
 - [ ] Selecting and remembering the language
