@@ -115,15 +115,29 @@ class I18n
         return $this->getDefault();        
     }
 
-    public function getLinkData()
+    public function getLinkData(array $languages)
     {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
         
         $port = $_SERVER["SERVER_PORT"] == "80" ? '' : ":{$_SERVER['SERVER_PORT']}";
         
-        $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $port . $_SERVER['REQUEST_URI'];
+        $hostname_parts = explode('.', $_SERVER['HTTP_HOST'], 2);
         
-        echo $url;
+        $url = $protocol . '://' . '%s.' . $hostname_parts[1] . $port . $_SERVER['REQUEST_URI'];
+
+        $data = [];
+        
+        foreach ($languages as $code => $label) {
+        
+            $data[] = [
+                'url' => sprintf($url, $code),
+                'label' => $label,
+                'is_current' => $code == $hostname_parts[0]
+            ];
+          
+        }
+        
+        return $data;
     }
 }
 

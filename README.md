@@ -104,3 +104,4 @@
   - remove code duplication: extract common i18n code out to separate files
   - add a second page and include the common i18n code
   - calculate the full current URL from the $_SERVER data
+  - generate the data for the language navigation links
