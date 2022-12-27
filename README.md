@@ -98,3 +98,4 @@
   - translate data from a database: separate table for the translations
   - display localised versions of images that contain text
 - [ ] Selecting and remembering the language
+  - add navigation links for switching between languages

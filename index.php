@@ -31,21 +31,31 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
 </head>
 <body>
 
+    <nav>
+        <?php if ($locale == 'en_GB'): ?>
+          
+            English
+            
+        <?php else: ?>
+        
+            <a href="http://en.localhost/">English</a>
+            
+        <?php endif; ?>
+        
+        <?php if ($locale == 'es'): ?>
+          
+            Spanish
+            
+        <?php else: ?>
+            
+            <a href="http://es.localhost/">Spanish</a>
+            
+        <?php endif; ?>
+    </nav>
+    
     <h1><?= $translator->gettext('Home') ?></h1>
 
-    <img src="/images/sign_<?= $locale ?>.png">
+    <p><?= $translator->gettext('Hello and welcome!') ?></p>
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
