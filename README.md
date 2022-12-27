@@ -102,3 +102,4 @@
   - [Why flags do not represent languages](https://www.flagsarenotlanguages.com/blog/why-flags-do-not-represent-language/)
   - language switching links: what they should say and where to put them
   - remove code duplication: extract common i18n code out to separate files
+  - add a second page and include the common i18n code
