@@ -104,6 +104,14 @@ class I18n
     
     public function getLocaleForRedirect()
     {
+        $locale = $this->getBestMatchFromCookie();
+        
+        if ($locale !== null) {
+          
+            return $locale;
+          
+        }
+      
         $locale = $this->getBestMatchFromHeader();
         
         if ($locale !== null) {
@@ -114,7 +122,18 @@ class I18n
         
         return $this->getDefault();        
     }
-
+    
+    private function getBestMatchFromCookie()
+    {
+        if (isset($_COOKIE['locale'])) {
+        
+            return $this->getBestMatch($_COOKIE['locale']);
+          
+        }
+        
+        return null;
+    }
+      
     public function getLinkData(array $languages)
     {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
