@@ -85,5 +85,16 @@
   - [PHP: strftime](https://www.php.net/manual/en/function.strftime.php)
   - [PHP: The IntDateFormatter class](https://www.php.net/manual/en/class.intldateformatter.php)
   - translate day and month names in dates based on the locale
-- [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
+- [x] Translating content unsuited to gettext: long text, plurals, decimals and dates
+  - [GNU gettext](https://www.gnu.org/software/gettext/manual/gettext.html)
+  - handle lang strings of text in separate files
+  - display a message if the file containing the translation is unavailable
+  - [Markdown](https://daringfireball.net/projects/markdown/)
+  - [Markdown emphasis syntax](https://daringfireball.net/projects/markdown/syntax#em)
+  - use a plain-text formatting language to help translators
+  - [Packagist: markdown parsers](https://packagist.org/?query=markdown)
+  - convert translations in separate files to Markdown
+  - translate data from a database: multiple columns in one table
+  - translate data from a database: separate table for the translations
+  - display localised versions of images that contain text
 - [ ] Selecting and remembering the language

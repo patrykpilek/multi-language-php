@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-04-24 10:47+0200\n"
-"PO-Revision-Date: 2020-04-24 10:48+0200\n"
+"POT-Creation-Date: 2020-04-25 13:09+0200\n"
+"PO-Revision-Date: 2020-04-25 13:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -15,22 +15,30 @@ msgstr ""
 "X-Poedit-KeywordsList: __\n"
 "X-Poedit-SearchPath-0: index.php\n"
 
-#: index.php:34
+#: index.php:39
 msgid "Example"
 msgstr "Ejemplo"
 
-#: index.php:38
+#: index.php:43
 msgid "Home"
 msgstr "Inicio"
 
-#: index.php:40
-#, php-format
-msgid "Welcome, %s"
-msgstr "Bienvenido, %s"
+#: index.php:47
+msgid "Title"
+msgstr "Título"
 
-#: index.php:42
-#, php-format
-msgid "You have %d message"
-msgid_plural "You have %d messages"
-msgstr[0] "Tienes %d mensaje"
-msgstr[1] "Tienes %d mensajes"
+#: index.php:48
+msgid "Description"
+msgstr "Descripción"
+
+#: index.php:49
+msgid "Size"
+msgstr "Tamaño"
+
+#~ msgid "Welcome, %s"
+#~ msgstr "Bienvenido, %s"
+
+#~ msgid "You have %d message"
+#~ msgid_plural "You have %d messages"
+#~ msgstr[0] "Tienes %d mensaje"
+#~ msgstr[1] "Tienes %d mensajes"
