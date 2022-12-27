@@ -1,21 +1,15 @@
 <nav>
-    <?php if ($locale == 'en_GB'): ?>
-      
-        English
-        
-    <?php else: ?>
+    <?php foreach ($link_data as $link): ?>
     
-        <a href="http://en.localhost/">English</a>
-        
-    <?php endif; ?>
-    
-    <?php if ($locale == 'es'): ?>
+        <?php if ($link['is_current']): ?>
+          
+            <?= $link['label'] ?>
+            
+        <?php else: ?>
+          
+            <a href="<?= $link['url'] ?>"><?= $link['label'] ?></a>
+          
+        <?php endif; ?>
       
-        Español
-        
-    <?php else: ?>
-        
-        <a href="http://es.localhost/">Español</a>
-        
-    <?php endif; ?>
+    <?php endforeach; ?>
 </nav>
