@@ -101,3 +101,4 @@
   - add navigation links for switching between languages
   - [Why flags do not represent languages](https://www.flagsarenotlanguages.com/blog/why-flags-do-not-represent-language/)
   - language switching links: what they should say and where to put them
+  - remove code duplication: extract common i18n code out to separate files
