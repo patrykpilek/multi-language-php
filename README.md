@@ -88,4 +88,5 @@
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
   - [GNU gettext](https://www.gnu.org/software/gettext/manual/gettext.html)
   - handle lang strings of text in separate files
+  - display a message if the file containing the translation is unavailable
 - [ ] Selecting and remembering the language

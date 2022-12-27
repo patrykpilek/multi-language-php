@@ -22,6 +22,18 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
+$filename = "content/body.$locale.html";
+
+if (is_readable($filename)) {
+
+    $content = file_get_contents($filename);
+  
+} else {
+  
+    $content = "Content for $locale not found";
+  
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
@@ -33,7 +45,7 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
 
     <h1><?= $translator->gettext('Home') ?></h1>
     
-    <?php require "content/body.$locale.html" ?>    
+    <?= $content ?>
 
 </body>
 </html>
