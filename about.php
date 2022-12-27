@@ -15,9 +15,20 @@ require 'includes/i18n_init.php';
 
     <?php require 'includes/lang_nav.php' ?>
     
-    <h1><?= $translator->gettext('Home') ?></h1>
-
-    <p><?= $translator->gettext('Hello and welcome!') ?></p>
+    <h1><?= $translator->gettext('About') ?></h1>
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

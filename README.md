@@ -97,4 +97,14 @@
   - translate data from a database: multiple columns in one table
   - translate data from a database: separate table for the translations
   - display localised versions of images that contain text
-- [ ] Selecting and remembering the language
+- [x] Selecting and remembering the language
+  - add navigation links for switching between languages
+  - [Why flags do not represent languages](https://www.flagsarenotlanguages.com/blog/why-flags-do-not-represent-language/)
+  - language switching links: what they should say and where to put them
+  - remove code duplication: extract common i18n code out to separate files
+  - add a second page and include the common i18n code
+  - calculate the full current URL from the $_SERVER data
+  - generate the data for the language navigation links
+  - add the language navigation links to the HTML
+  - remember the selected locale in a cookie
+  - redirect to the locale remembered in the cookie

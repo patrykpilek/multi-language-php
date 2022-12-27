@@ -104,6 +104,14 @@ class I18n
     
     public function getLocaleForRedirect()
     {
+        $locale = $this->getBestMatchFromCookie();
+        
+        if ($locale !== null) {
+          
+            return $locale;
+          
+        }
+      
         $locale = $this->getBestMatchFromHeader();
         
         if ($locale !== null) {
@@ -113,6 +121,42 @@ class I18n
         }
         
         return $this->getDefault();        
+    }
+    
+    private function getBestMatchFromCookie()
+    {
+        if (isset($_COOKIE['locale'])) {
+        
+            return $this->getBestMatch($_COOKIE['locale']);
+          
+        }
+        
+        return null;
+    }
+      
+    public function getLinkData(array $languages)
+    {
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+        
+        $port = $_SERVER["SERVER_PORT"] == "80" ? '' : ":{$_SERVER['SERVER_PORT']}";
+        
+        $hostname_parts = explode('.', $_SERVER['HTTP_HOST'], 2);
+        
+        $url = $protocol . '://' . '%s.' . $hostname_parts[1] . $port . $_SERVER['REQUEST_URI'];
+
+        $data = [];
+        
+        foreach ($languages as $code => $label) {
+        
+            $data[] = [
+                'url' => sprintf($url, $code),
+                'label' => $label,
+                'is_current' => $code == $hostname_parts[0]
+            ];
+          
+        }
+        
+        return $data;
     }
 }
 
