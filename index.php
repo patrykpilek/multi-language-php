@@ -22,22 +22,6 @@ if ($locale === null) {
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
-$conn = new PDO('mysql:host=localhost;dbname=phpi18n_3;charset=utf8', 'root', 'secret');
-
-$sql = "SELECT title, description, size
-        FROM product
-        JOIN product_translation
-        ON product.id = product_translation.product_id
-        WHERE locale = :locale";
-
-$stmt = $conn->prepare($sql);
-
-$stmt->bindValue(':locale', $locale, PDO::PARAM_STR);
-
-$stmt->execute();
-
-$products = $stmt->fetchAll();
-
 ?>
 <!DOCTYPE html>
 <html lang="<?= str_replace('_', '-', $locale) ?>">
@@ -49,27 +33,8 @@ $products = $stmt->fetchAll();
 
     <h1><?= $translator->gettext('Home') ?></h1>
 
-    <table border="1">
-        <thead>
-            <th><?= $translator->gettext('Title') ?></th>
-            <th><?= $translator->gettext('Description') ?></th>
-            <th><?= $translator->gettext('Size') ?></th>
-        </thead>
-        <tbody>
-
-            <?php foreach ($products as $product): ?>
-
-                <tr>
-                    <td><?= $product['title'] ?></td>
-                    <td><?= $product['description'] ?></td>
-                    <td><?= $product['size'] ?></td>
-                </tr>
-
-            <?php endforeach; ?>
-
-        <tbody>
-    </table>    
-
+    <img src="/images/sign_<?= $locale ?>.png">
+    
 </body>
 </html>
 
