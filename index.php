@@ -15,28 +15,12 @@ if ($locale === null) {
   
     $subdomain = substr($locale, 0, 2);
     
-    header("Location: http://" . $subdomain . ".phpi18n.localhost/");
+    header("Location: http://" . $subdomain . ".localhost/");
     exit;
       
 }
 
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
-
-$name = "Dave";
-
-$count = 1;
-
-$pi = 3.14159;
-
-// setlocale(LC_ALL, 'es_ES.UTF-8');
-
-$formatter = new NumberFormatter($locale, NumberFormatter::DECIMAL);
-$formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 5);
-
-$timestamp = strtotime('20 July 1969');
-
-$date_formatter = new IntlDateFormatter($locale, null, null);
-$date_formatter->setPattern('EEEE, d MMMM Y');
 
 ?>
 <!DOCTYPE html>
@@ -48,16 +32,8 @@ $date_formatter->setPattern('EEEE, d MMMM Y');
 <body>
 
     <h1><?= $translator->gettext('Home') ?></h1>
+    
+    <?php require "content/body.$locale.html" ?>    
 
-    <p><?= sprintf($translator->gettext("Welcome, %s"), $name) ?></p>
-
-    <p><?= sprintf($translator->ngettext("You have %d message", "You have %d messages", $count), $count) ?></p>
-    
-    <p><?= $formatter->format($pi) ?></p>
-    
-    <!-- <p><?= strftime("%A, %d %B %Y", $timestamp) ?></p> -->
-    
-    <p><?= $date_formatter->format($timestamp) ?></p>
-    
 </body>
 </html>

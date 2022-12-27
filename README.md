@@ -86,4 +86,6 @@
   - [PHP: The IntDateFormatter class](https://www.php.net/manual/en/class.intldateformatter.php)
   - translate day and month names in dates based on the locale
 - [ ] Translating content unsuited to gettext: long text, plurals, decimals and dates
+  - [GNU gettext](https://www.gnu.org/software/gettext/manual/gettext.html)
+  - handle lang strings of text in separate files
 - [ ] Selecting and remembering the language
