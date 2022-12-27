@@ -44,11 +44,11 @@ $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGE
         
         <?php if ($locale == 'es'): ?>
           
-            Spanish
+            Español
             
         <?php else: ?>
             
-            <a href="http://es.localhost/">Spanish</a>
+            <a href="http://es.localhost/">Español</a>
             
         <?php endif; ?>
     </nav>

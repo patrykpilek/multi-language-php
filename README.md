@@ -99,3 +99,5 @@
   - display localised versions of images that contain text
 - [ ] Selecting and remembering the language
   - add navigation links for switching between languages
+  - [Why flags do not represent languages](https://www.flagsarenotlanguages.com/blog/why-flags-do-not-represent-language/)
+  - language switching links: what they should say and where to put them
