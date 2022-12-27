@@ -20,3 +20,5 @@ if ($locale === null) {
 $translator = new PhpMyAdmin\MoTranslator\Translator("locales/$locale/LC_MESSAGES/messages.mo");
 
 $link_data = $i18n->getLinkData(['en' => 'English', 'es' => 'Español']);
+
+setcookie('locale', $locale, time() + 60 * 60 * 24 * 15, '/', $domain);

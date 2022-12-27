@@ -106,3 +106,4 @@
   - calculate the full current URL from the $_SERVER data
   - generate the data for the language navigation links
   - add the language navigation links to the HTML
+  - remember the selected locale in a cookie
